@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Create Article
+{% endblock %}
+
+{% block style %}
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[name=title] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 70px;
+    font-size: 24px;
+}
+input[name=article] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 150px;
+    font-size: 24px;
+}
+form button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    opacity: 0.8;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+    height: 20%;
+}
+
+.container {
+    padding: 16px;
+}
+
+@media screen and (max-width: 300px) {
+ span.psw {
+   display: block;
+   float: none;
+ } 
+{% endblock %}
+
+{% block body %}
+<form method="post">
+    <div class="imgcontainer">
+        <img src="../static/article.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+        <label for="title"><b>Title of the Article</b></label>
+        <input type="text" placeholder="Enter a Title" name="title" required>
+
+        <label for="article"><b>Write an Article</b></label>
+        <input type="text" placeholder="Write an Article" name="article" required>
+
+        <button type="submit">Send!</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+    </div>
+</form>
+{% endblock %} 

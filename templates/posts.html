@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Articles
+{% endblock %}
+
+{% block body %}
+<div class="all_articles" style="margin: 10px;">
+    <h1>All Articles:</h1>
+    {% for article in articles %}
+    <div class="alert alert-info">
+        <h2>{{ article[1] }}</h2>
+        <p>{{ article[2] }}</p>
+        <p><b>Publicated on: {{ article[3] }}</b></p>
+        <a href="/articles/{{article[0]}}" class="btn btn-warning">Details</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
